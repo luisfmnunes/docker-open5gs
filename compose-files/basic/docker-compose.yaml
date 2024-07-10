@@ -15,7 +15,7 @@ services:
 
   nrf:
     container_name: nrf
-    image: "nrf:${OPEN5GS_VERSION}"
+    image: "borieher/nrf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/nrf
       args:
@@ -32,7 +32,7 @@ services:
 
   ausf:
     container_name: ausf
-    image: "ausf:${OPEN5GS_VERSION}"
+    image: "borieher/ausf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/ausf
       args:
@@ -51,7 +51,7 @@ services:
 
   udm:
     container_name: udm
-    image: "udm:${OPEN5GS_VERSION}"
+    image: "borieher/udm:${OPEN5GS_VERSION}"
     build:
       context: ../../images/udm
       args:
@@ -70,7 +70,7 @@ services:
 
   udr:
     container_name: udr
-    image: "udr:${OPEN5GS_VERSION}"
+    image: "borieher/udr:${OPEN5GS_VERSION}"
     build:
       context: ../../images/udr
       args:
@@ -91,7 +91,7 @@ services:
 
   nssf:
     container_name: nssf
-    image: "nssf:${OPEN5GS_VERSION}"
+    image: "borieher/nssf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/nssf
       args:
@@ -110,7 +110,7 @@ services:
 
   bsf:
     container_name: bsf
-    image: "bsf:${OPEN5GS_VERSION}"
+    image: "borieher/bsf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/bsf
       args:
@@ -129,7 +129,7 @@ services:
 
   pcf:
     container_name: pcf
-    image: "pcf:${OPEN5GS_VERSION}"
+    image: "borieher/pcf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/pcf
       args:
@@ -150,7 +150,7 @@ services:
 
   amf:
     container_name: amf
-    image: "amf:${OPEN5GS_VERSION}"
+    image: "borieher/amf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/amf
       args:
@@ -171,7 +171,7 @@ services:
 
   smf:
     container_name: smf
-    image: "smf:${OPEN5GS_VERSION}"
+    image: "borieher/smf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/smf
       args:
@@ -191,7 +191,7 @@ services:
 
   upf:
     container_name: upf
-    image: "upf:${OPEN5GS_VERSION}"
+    image: "borieher/upf:${OPEN5GS_VERSION}"
     build:
       context: ../../images/upf
       args:
