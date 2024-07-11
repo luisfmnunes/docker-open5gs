@@ -212,6 +212,29 @@ services:
     privileged: true
     cap_add:
       - NET_ADMIN
+  
+  webui:
+    container_name: webui
+    image: "borieher/webui:${OPEN5GS_VERSION}"
+    build:
+      context: ../../images/webui
+      args:
+        - OPEN5GS_VERSION=${OPEN5GS_VERSION}
+        - NODE_VERSION=${NODE_VERSION}
+    environment:
+      - DB_URI=mongodb://db.open5gs.org/open5gs
+      - PORT=9099
+      - HOSTNAME=0.0.0.0
+      - NODE_ENV=dev
+    command: "run dev"
+    networks:
+      open5gs:
+        aliases:
+          - webui.open5gs.org
+    depends_on:
+      - db
+    ports:
+      - "0.0.0.0:9099:9099/tcp"
 
 networks:
   open5gs:
