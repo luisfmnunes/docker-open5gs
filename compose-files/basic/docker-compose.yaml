@@ -167,7 +167,8 @@ services:
     depends_on:
       - nrf
     ports:
-      - "0.0.0.0:38412:38412/sctp"
+      - "0.0.0.0:38410:38412/sctp"
+
 
   smf:
     container_name: smf
@@ -208,7 +209,7 @@ services:
       - source: upf_config
         target: /etc/open5gs/custom/upf.yaml
     ports:
-      - "0.0.0.0:2152:2152/udp"
+      - "0.0.0.0:2153:2152/udp"
     privileged: true
     cap_add:
       - NET_ADMIN
