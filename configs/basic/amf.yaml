@@ -1,6 +1,7 @@
 logger:
   file:
     path: /var/log/open5gs/amf.log
+  level: debug
 
 global:
 
@@ -34,6 +35,7 @@ amf:
       s_nssai:
         - sst: 1
           sd: 1
+        - sst: 2
   security:
       integrity_order : [ NIA2, NIA1, NIA0 ]
       ciphering_order : [ NEA0, NEA1, NEA2 ]
